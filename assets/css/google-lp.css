@@ -1,0 +1,1007 @@
+:root {
+    --text-color: #1f3d7b;
+    --dark-bg: #425a8b;
+    --btn-color: var(--dark-bg);
+    --light-color: #7991c2;
+}
+
+body {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3, h4, h5, p {
+    color: var(--text-color);
+}
+
+
+.btn.theme-btn {
+    background: var(--btn-color);
+    border: 2px solid var(--btn-color);
+    border-radius: 35px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 35px;
+    min-width: 135px;
+}
+.btn.theme-btn:hover {
+    background: none;
+    color: var(--btn-color);
+}
+
+.btn.theme-btn.light-btn {
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    color: var(--text-color);
+}
+.btn.theme-btn.light-btn:hover {
+    background: none;
+    color: #ffffff;
+}
+.btn.learnMore {
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    text-align: left;
+    padding-right: 32px;
+    position: relative;
+}
+.btn.learnMore::before {
+    position: absolute;
+    content: "";
+    background: var(--text-color);
+    border-radius: 4px;
+    width: 22px;
+    height: 2px;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.btn.learnMore::after {
+    position: absolute;
+    content: "";
+    border-right: 2px solid var(--text-color);
+    border-top: 2px solid var(--text-color);
+    border-radius: 2px;
+    right: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+section {
+    position: relative;
+}
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.bg_shape {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.bg_shape.left.top {
+    background-position: left top;
+}
+.bg_shape.left.center {
+    background-position: left center;
+}
+.bg_shape.left.bottom {
+    background-position: left bottom;
+}
+.bg_shape.right.top {
+    background-position: right top;
+}
+.bg_shape.right.center {
+    background-position: right center;
+}
+.bg_shape.right.bottom {
+    background-position: right bottom;
+}
+.heading {
+    margin-bottom: 35px;
+}
+
+.heading h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
+}
+.swiper-pagination .swiper-pagination-bullet, .owl-carousel .owl-dots .owl-dot {
+    background: var(--text-color) !important;
+    opacity: 0.5;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+.swiper-pagination .swiper-pagination-bullet-active, .owl-carousel .owl-dots .owl-dot.active {
+    opacity: 1;
+}
+.text-white, .text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white p {
+    color: #ffffff;
+}
+
+
+.mainHeader {
+    background: var(--dark-bg);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 18px 0;
+    z-index: 99;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.mainHeader.fixed {
+    background: rgba(66, 90, 139, 0.60);
+}
+.main_logo {
+    display: inline-block;
+    min-width: 200px;
+}
+nav.main_menu {
+    padding: 0;
+}
+.main_menu li.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+.main_menu li .nav-link {
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 12px 0;
+}
+.main_menu li .nav-link:hover {
+    opacity: 0.8;
+}
+.main_menu li.dropdown .nav-link::after {
+    display: none;
+}
+.main_menu ul.dropdown-menu {
+    position: absolute;
+    border: none;
+    border-radius: 0;
+    padding: 15px 24px;
+    min-width: 420px;
+    left: 0;
+}
+.main_menu ul.dropdown-menu li {
+    position: relative;
+}
+.main_menu ul.dropdown-menu li:not(:last-child)::before {
+    background: #5c73a4;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 35%;
+    height: 1px;
+    opacity: 0.6;
+}
+.main_menu ul.dropdown-menu li a {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-color);
+    display: inline-block;
+    padding: 10px 0;
+}
+.main_menu ul.dropdown-menu li a:hover {
+    color: var(--text-color);
+    background: none;
+    opacity: 0.8;
+}
+
+
+.mainHero {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    margin-top: 86px;
+}
+.mainHero::before {
+    background-color: #7991c2;
+    background: linear-gradient(0deg, #7991c2, rgba(121, 145, 194, 0.7));
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: -1;
+}
+.hero_content h1 {
+    font-size: 82px;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.hero_content p {
+    font-size: 35px;
+    font-weight: 500;
+    color: #ffffff;
+    max-width: 500px;
+    margin: 0 auto;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+.mainHero .btn {
+    min-width: 180px;
+}
+.mainHero .btn:not(:last-child) {
+    margin-right: 40px;
+}
+.mainHero .btn:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+
+
+.aboutUs, .aboutLearning {
+    overflow: hidden;
+}
+.aboutUs .bg_shape {
+    background-size: 18%;
+}
+.aboutUs .textBox {
+    position: relative;
+    max-width: 400px;
+    padding: 20px 0;
+}
+.aboutCarousel {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: 0;
+    overflow: visible;
+}
+.aboutCarousel .owl-stage-outer {
+    overflow: visible;
+}
+.aboutCarousel .swiper-slide, .aboutCarousel .owl-item {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.aboutCarousel .swiper-slide:not(.swiper-slide-active), .aboutCarousel .owl-item:not(.active) {
+    opacity: 0.1;
+}
+.aboutCarousel .swiper-slide.swiper-slide-next, .aboutCarousel .owl-item.active+.owl-item {
+    opacity: 0.3;
+}
+.aboutCarousel .swiper-slide img, .aboutCarousel .item img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+}
+.aboutCarousel .swiper-pagination, .aboutCarousel .owl-dots {
+    position: static;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.aboutLearning .bg_shape, .ourReviews .bg_shape {
+    background-size: 16%;
+}
+.learningSlider .item {
+    padding: 20px;
+}
+.learningSlider .item:nth-child(2n+1) {
+    margin-top: 30px !important;
+}
+.learningSlider .item .swiper-slide-shadow {
+    opacity: 0 !important;
+}
+.learningSlider .item img {
+    background: #f7f7f7;
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    padding: 8px 8px 40px 8px;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 20%);
+}
+
+.aboutLearning .textBox {
+    max-width: 500px;
+    margin-left: auto;
+}
+
+.whatLearn .bg_shape.left {
+    background-size: 10%;
+}
+
+.whatLearn .bg_shape.right {
+    background-size: 14%;
+    top: -30px;
+}
+.whatLearn .row>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.learnItem_list {
+    margin: 0 -20px;
+}
+.learnItem_list>div {
+    padding: 25px 20px;
+}
+.learnItem {
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.learnItem .imgBox {
+    position: relative;
+    background: var(--light-color);
+    border-radius: 15px;
+}
+.learnItem .imgBox .img {
+    overflow: hidden;
+    border-radius: 15px;
+}
+.learnItem .imgBox img {
+    width: 100%;
+    height: 292px;
+    object-fit: cover;
+    border-radius: 15px;
+    -webkit-transition: all 0.45s;
+    -moz-transition: all 0.45s;
+    transition: all 0.45s;
+}
+.learnItem:hover .imgBox img {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    transform: scale(1.15);
+}
+.learnItem .imgBox h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    padding: 12px 18px;
+}
+.learnItem .textBox {
+    background: var(--dark-bg);
+    border-radius: 15px;
+    padding: 50px 25px 25px;
+    margin-top: -28px;
+    height: 100%;
+}
+
+.learnItem .textBox p {
+    font-size: 18px;
+    color: #ffffff;
+}
+.learnItem .btnBox {
+    text-align: center;
+    padding: 6px 0;
+}
+.learnItem .btnBox .btn {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+
+.howWork {
+    background: var(--dark-bg);
+}
+
+.howWork .imgBox img {
+    margin-bottom: 28px;
+}
+.howWork .imgBox .img1 {
+    margin-top: 72px;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+.howWork .imgBox .img3 {
+    max-width: 55%;
+    height: 200px;
+    object-fit: cover;
+}
+.howWork .textBox p+h3 {
+    margin-top: 42px;
+}
+.howWork .textBox h3 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+
+
+
+.reviewItem {
+    padding: 25px 0;
+}
+.reviewItem .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.reviewItem .info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 45px;
+}
+.reviewItem .content {
+    max-width: 880px;
+    width: 100%;
+}
+.reviewItem .info h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+.reviewSlider .owl-nav button {
+    position: absolute;
+    top: 70px;
+    font-size: 32px !important;
+    font-weight: 200;
+}
+.reviewSlider .owl-nav button.owl-prev {
+    left: -50px;
+}
+.reviewSlider .owl-nav button.owl-next {
+    right: -50px;
+}
+.reviewSlider .owl-dots {
+    text-align: center;
+}
+
+.ourFaqs {
+    background: var(--light-color);
+}
+.faqlist {
+    padding-left: 32px;
+}
+.faqlist .faqItem {
+    background: none; 
+    border: none;
+    padding: 16px 0;
+}
+
+.faqlist .faqItem h3 {
+    position: relative;
+    font-size: 28px;
+    padding: 6px 0;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 80px;
+}
+.faqlist .faqItem h3::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(224deg);
+    -moz-transform: rotate(224deg);
+    transform: rotate(224deg);
+}
+.faqlist .faqItem h3.collapsed::before {
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.faqlist .faqItem .faqContent {
+    padding-left: 80px;
+}
+
+
+
+.mainFooter {
+    background: var(--light-color);
+    padding: 40px 0 135px;
+}
+footer.mainFooter .copyright {
+    margin-top: 25px;
+}
+
+footer.mainFooter .copyright p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+
+
+
+.sticky_bar {
+    background: var(--text-color);
+    border-top: 3px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    padding: 12px;
+    z-index: 98;
+    -webkit-transition: all 0.55s;
+    -moz-transition: all 0.55s;
+    transition: all 0.55s;
+}
+.sticky_bar.fixed {
+    bottom: 0;
+}
+.sticky_bar .content {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+}
+.sticky_bar .title {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    max-width: 355px;
+    width: 100%;
+    margin: 0 auto 5px auto;
+}
+.sticky_bar .title::before {
+    position: absolute;
+    content: "";
+    background: #ffffff;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    opacity: 0.6;
+    z-index: -1;
+}
+.sticky_bar .title span {
+    background: var(--text-color);
+    font-size: 16px;
+    color: #ffffff;
+    padding: 1px 12px;
+    display: inline-block;
+}
+.sticky_bar .btnBox .btn {
+    padding: 6px 10px;
+    min-width: 155px;
+}
+
+/*============================================ Responsive Part 
+*/
+
+.container, .container-fluid {
+    padding-left: 26px;
+    padding-right: 26px;
+}
+@media (max-width: 1440px) {
+    .main_menu li.nav-item:not(:last-child) {
+        margin-right: 36px;
+    }
+    .main_menu li .nav-link {
+        font-size: 15px;
+    }
+}
+@media (max-width: 1380px) {
+    
+    .main_menu ul.dropdown-menu {
+        padding: 10px 20px;
+        min-width: 300px;
+    }
+    .heading h2 {
+        font-size: 40px;
+    }
+    .hero_content h1 {
+        font-size: 65px;
+    }
+    .hero_content p {
+        font-size: 25px;
+        max-width: 405px;
+    }
+    .main_logo {
+        min-width: 166px;
+    }
+}
+
+@media (max-width: 1199px) {
+    
+    
+    .mainHeader {
+        padding: 22px 0;
+    }
+    .main_logo {
+        min-width: 130px;
+    }
+    .main_logo img {
+        max-width: 110px;
+    }
+    .navToggle {
+        background: none;
+        border: none;
+    }
+    nav.main_menu {
+        position: fixed;
+        background: #ffffff;
+        right: -350px;
+        top: 0;
+        width: 100%;
+        max-width: 350px;
+        height: 100%;
+        padding: 30px;
+        display: block;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+    .header_open nav.main_menu {
+        right: 0;
+    }
+    nav.main_menu .navMenu {
+        display: block !important;
+    }
+    nav.main_menu .navMenu li.nav-item {
+        margin: 16px 0;
+    }
+    nav.main_menu .navMenu li .nav-link {
+        font-size: 20px;
+        color: var(--text-color);
+    }
+    header.mainHeader .btn {
+        padding: 8px 35px;
+        font-size: 18px;
+    }
+    .main_menu ul.dropdown-menu {
+        position: static;
+        min-width: auto;
+        padding: 0 15px;
+    }
+    
+    header.mainHeader .btn {
+        padding: 6px 24px;
+        font-size: 15px;
+    }
+    
+    .mainHero {
+        margin-top: 84px;
+    }
+    .learnItem .imgBox img {
+        height: 225px;
+    }
+    
+    
+    
+    
+}
+@media (max-width: 991px) {
+    
+    .heading h2 {
+        font-size: 32px;
+    }
+    .hero_content h1 {
+        font-size: 54px;
+    }
+    .hero_content p {
+        font-size: 26px;
+    }
+    .aboutUs .bg_shape {
+        background-size: 22%;
+        background-position: top 12% right 0 !important;
+    }
+    .aboutUs .textBox, .aboutLearning .textBox {
+        max-width: 100%;
+    }
+    .aboutCarousel {
+        margin: 22px auto 0;
+    }
+    .aboutLearning .bg_shape, .ourReviews .bg_shape {
+        background-size: 32%;
+        background-position: top 20% right 0 !important;
+    }
+    
+    .learningSlider {
+        max-width: 460px;
+        width: 100%;
+    }
+    
+    .whatLearn .bg_shape.right {
+        background-size: 22%;
+        top: 0;
+        background-position: top 5% right 0;
+    }
+    .whatLearn .bg_shape.left {
+        display: none;
+    }
+    
+    .howWork .imgBox {
+        margin-top: 50px;
+    }
+    .reviewItem {
+        padding: 20px;
+    }
+    
+    .reviewItem .info img {
+        width: 80px;
+        height: 80px;
+        margin-right: 25px;
+    }
+    .reviewItem .info h3 {
+        font-size: 18px;
+    }
+    .reviewSlider .owl-nav button.owl-prev {
+        top: 30px;
+        left: -12px;
+    }
+    .reviewSlider .owl-nav button.owl-next {
+        top: 30px;
+        right: -12px;
+    }
+    
+
+}
+@media (max-width: 767px) {
+    
+    body {
+        font-size: 16px;
+    }
+    .section-padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .heading {
+        margin-bottom: 15px;
+    }
+    
+    .aboutUs .textBox {
+        max-width: 400px;
+        padding: 0;
+    }
+    .whatLearn {
+        padding-bottom: 10px;
+    }
+    .aboutUs {
+        padding-bottom: 40px;
+    }
+    .aboutLearning {
+        padding-top: 40px;
+    }
+    
+    .howWork .imgBox .img1 {
+        height: 180px;
+    }
+    .howWork .imgBox .img3 {
+        height: 145px;
+    }
+    .learnItem {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+   
+}
+@media (max-width: 640px) {
+    .mainHeader {
+        padding: 14px 0;
+    }
+    nav.main_menu {
+        right: -300px;
+        max-width: 300px;
+    }
+    nav.main_menu .navMenu li .nav-link {
+        font-size: 18px;
+    }
+    .heading h2 {
+        font-size: 30px;
+    }
+    .mainHero {
+        min-height: 90vh;
+        margin-top: 68px;
+    }
+    .aboutCarousel {
+        padding: 0 50px;
+    }
+    .aboutCarousel .swiper-slide img, .aboutCarousel .item img {
+        height: 280px;
+    }
+    .learningSlider {
+        max-width: 328px;
+    }
+    .learningSlider .item img {
+        height: 300px;
+    }
+    .learnItem .imgBox h3 {
+        font-size: 18px;
+        padding: 12px;
+    }
+    .learnItem .textBox {
+        padding: 42px 16px 16px;
+    }
+    .learnItem .textBox h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .learnItem .textBox p {
+        font-size: 15px;
+    }
+    .ourReviews .heading {
+        max-width: 300px;
+        width: 100%;
+    }
+    .howWork .textBox h3 {
+        font-size: 20px;
+    }
+    .faqlist {
+        padding-left: 0;
+    }
+    .faqlist .faqItem {
+        padding: 10px 0;
+    }
+    .faqlist .faqItem h3, .faqlist .faqItem .faqContent {
+        padding-left: 50px;
+    }
+    .faqlist .faqItem h3 {
+        font-size: 20px;
+    }
+    .faqlist .faqItem h3::before {
+        top: 15px;
+        width: 12px;
+        height: 12px;
+    }
+    .faqlist .faqItem h3.collapsed::before {
+        top: 8px;
+    }
+    
+    
+}
+@media (max-width: 480px) {
+    .container, .container-fluid {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    .btn.theme-btn {
+        font-size: 16px;
+    }
+    .hero_content h1 {
+        font-size: 42px;
+        max-width: 220px;
+        margin: 0 auto 8px;
+    }
+    .hero_content p {
+        font-size: 18px;
+        max-width: 268px;
+    }
+    .mainHero .btn:not(:last-child) {
+        margin-right: 20px;
+    }
+    .mainHero .btn {
+        font-size: 14px;
+        min-width: 142px;
+    }
+    .howWork .imgBox .img1 {
+        height: 130px;
+    }
+    .howWork .imgBox .img3 {
+        height: 110px;
+    }
+    .faqlist .faqItem h3, .faqlist .faqItem .faqContent {
+        padding-left: 28px;
+    }
+    .faqlist .faqItem h3 {
+        font-size: 16px;
+    }
+    .faqlist .faqItem .faqContent {
+        font-size: 15px;
+    }
+    .faqlist .faqItem h3::before {
+        top: 14px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+    }
+    .faqlist .faqItem h3.collapsed::before {
+        top: 5px;
+    }
+    .mainFooter {
+        padding: 20px 0 115px;
+    }
+}
+@media (max-width: 380px) {
+    nav.main_menu {
+        right: -246px;
+        max-width: 246px;
+        padding: 25px;
+    }
+    nav.main_menu .navMenu li.nav-item {
+        margin: 10px 0;
+    }
+    nav.main_menu .navMenu li .nav-link {
+        font-size: 15px;
+    }
+    header.mainHeader .btn {
+        font-size: 15px;
+    }
+    .heading h2 {
+        font-size: 26px;
+    }
+    .hero_content h1 {
+        font-size: 36px;
+        max-width: 200px;
+    }
+    .mainHero .btn:not(:last-child) {
+        margin-right: 12px;
+    }
+    .mainHero .btn {
+        font-size: 13px;
+        min-width: 108px;
+        padding: 5px 10px;
+    }
+    .learnItem .textBox p {
+        font-size: 14px;
+    }
+    .learnItem .btnBox .btn {
+        font-size: 14px;
+    }
+    .learnItem .imgBox img {
+        height: 192px;
+    }
+    .faqlist .faqItem h3 {
+        font-size: 15px;
+    }
+    .faqlist .faqItem .faqContent {
+        font-size: 14px;
+    }
+    .sticky_bar {
+        padding: 10px 20px;
+    }
+    .sticky_bar .btnBox .btn {
+        padding: 4px 10px;
+        min-width: 120px;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    li.nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+}
+@media (min-width: 1200px) {
+    .ourReviews .container {
+        padding: 0 50px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+}
+
+

@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Body Grotesque';
+    src: url('BodyGrotesque-Bold.woff2') format('woff2'),
+        url('BodyGrotesque-Bold.woff') format('woff'),
+        url('BodyGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,803 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Just one thing</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/justonething.css" type="text/css" rel="stylesheet" media="all" />
+    <link href="assets/fonts/tabler-icons.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <section class="vh-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 col-xs-12 px-0 position-relative text-left text-sm-center">
+                    <!-- <img src="assets/img/justonething/jotbanner.png" alt="image" class="w-100 vh-100 d-mob-none"> -->
+                    <div style="background-image: url(assets/img/justonething/jotbanner.png); background-size: cover; background-position: center; background-repeat: no-repeat;" class="w-100 vh-100 d-mob-none"></div>
+
+                    <img src="assets/img/justonething/jotbanner_mob_steps_head.png" alt="image"
+                        class="w-100 d-desk-none mxh-115">
+                    <div class="layer_content d-desk-none w-100">
+                        <img src="assets/img/justonething/partner_logo.png" alt="image">
+
+                    </div>
+                </div>
+                <div class="col-md-7 col-xs-12 text-black">
+
+
+
+                    <div class="d-flex align-items-center right_content">
+                        <div class="steps_form">
+                            <form id="form">
+                                <ul id="progressbar">
+                                    <li class="active" id="step1">
+                                        &nbsp;
+                                    </li>
+                                    <li id="step2">&nbsp;</li>
+                                    <li id="step3">&nbsp;</li>
+                                    <li id="step4">&nbsp;</li>
+                                    <li id="step5">&nbsp;</li>
+                                    <li id="step6">&nbsp;</li>
+                                    <li id="step7">&nbsp;</li>
+                                    <li id="step8">&nbsp;</li>
+                                    <!-- <li id="step9">&nbsp;</li> -->
+                                </ul>
+                                <!-----Start step 1-->
+                                <fieldset>
+                                    <div class="step_head_img"><img src="assets/img/justonething/step1head.png"
+                                            alt="image"></div>
+                                    <p class="step_title">I would like to</p>
+                                    <div class="fields">
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="teach" id="teach"
+                                                    onclick="showTeach();">
+                                                <label class=" form-check-label" for="teach">
+                                                    Teach
+                                                </label>
+                                                <img src="assets/img/justonething/teach.png" alt="image">
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="teach" id="Study"
+                                                    onclick="showStudy();">
+                                                <label class="form-check-label" for="Study">
+                                                    Study
+                                                </label>
+                                                <img src="assets/img/justonething/study.png" alt="image">
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-5">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="teach"
+                                                    id="Study-torah">
+                                                <label class="form-check-label" for="Study-torah">
+                                                    Study with my current partner in Torah
+                                                </label>
+                                                <img src="assets/img/justonething/study_torah.png" alt="image">
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="previous_btn"><i class="ti ti-chevron-left ti-xs"></i></span>
+                                    <input type="button" name="next-step" class="next-step next_btn"
+                                        value="Continue >" />
+                                </fieldset>
+                                <!-----End step 1-->
+                                <!--Start step 2-->
+                                <fieldset>
+                                    <div class="step_head_img"><img src="assets/img/justonething/step2head.png"
+                                            alt="image"></div>
+                                    <div id="showTeach">
+                                        <p class="step_title">
+                                            If we don't have a teacher for you, would you be interested in being matched
+                                            with someone else who also signed up to learn?</p>
+                                        <div class="fields">
+                                            <div class="mb-2">
+                                                <div class="form-check radio_btn">
+                                                    <input class="form-check-input" type="radio" name="matcheyes"
+                                                        id="matcheyes">
+                                                    <label class="form-check-label" for="matcheyes">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    error message
+                                                </div>
+                                            </div>
+                                            <div class="mb-5">
+                                                <div class="form-check radio_btn">
+                                                    <input class="form-check-input" type="radio" name="matcheyes"
+                                                        id="matcheno">
+                                                    <label class="form-check-label" for="matcheno">
+                                                        No
+                                                    </label>
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    error message
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="showStudy" style="display: none;">
+                                        <p class="step_title">If we don't have a student for you, are you interested in
+                                            being matched with someone else who also signed up to teach?</p>
+                                        <div class="fields">
+                                            <div class="mb-2">
+                                                <div class="form-check radio_btn">
+                                                    <input class="form-check-input" type="radio" name="matcheyes"
+                                                        id="matcheyes">
+                                                    <label class="form-check-label" for="matcheyes">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    error message
+                                                </div>
+                                            </div>
+                                            <div class="mb-5">
+                                                <div class="form-check radio_btn">
+                                                    <input class="form-check-input" type="radio" name="matcheyes"
+                                                        id="matcheno">
+                                                    <label class="form-check-label" for="matcheno">
+                                                        No
+                                                    </label>
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    error message
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="previous-step previous_btn"><i
+                                            class="ti ti-chevron-left ti-xs"></i></span>
+                                    <input type="button" name="next-step" class="next-step next_btn"
+                                        value="Continue >" />
+
+                                </fieldset>
+                                <!-----End step 2-->
+                                <!----Start step 3-->
+                                <fieldset class="max_830">
+                                    <div class="step_head_img"><img src="assets/img/justonething/step3head.png"
+                                            alt="image"></div>
+
+                                    <p class="step_title">
+                                        Fill out your personal information</p>
+                                    <div class="sum_flex mb-5">
+                                        <div class="sum_div">
+                                            <div class="fields">
+
+                                                <div class="form-check mb-2">
+                                                    <input type="text" class="form-control" placeholder="First name*" />
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    error message
+                                                </div>
+
+                                                <div class="form-check mb-2">
+                                                    <input type="text" class="form-control" placeholder="Last name*"
+                                                        </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <select class="form-control">
+                                                        <option>Gender</option>
+                                                        <option>Male</option>
+                                                        <option>Female</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <select class="form-control">
+                                                        <option>Date of birth</option>
+                                                        <option>20/10/2023</option>
+                                                        <option>20/10/2023</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sum_div">
+                                            <div class="fields">
+                                                <div class="form-check mb-2">
+                                                    <select class="form-control">
+                                                        <option>Country</option>
+                                                        <option>India</option>
+                                                        <option>America</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Zip / Postal code" </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input type="email" class="form-control" placeholder="Email address"
+                                                        </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input type="text" class="form-control" placeholder="Phone number"
+                                                        </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="previous-step previous_btn"><i
+                                            class="ti ti-chevron-left ti-xs"></i></span>
+                                    <input type="button" name="next-step" class="next-step next_btn"
+                                        value="Continue >" />
+
+                                </fieldset>
+                                <!----End step 3-->
+                                <!--Start step 4-->
+                                <fieldset>
+                                    <div class="step_head_img"><img src="assets/img/justonething/step3head.png"
+                                            alt="image"></div>
+
+                                    <p class="step_title">My Jewish Heritage</p>
+                                    <div class="fields">
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Jewis"
+                                                    id="BornJewish">
+                                                <label class="form-check-label" for="BornJewish">
+                                                    Born Jewish
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Jewis"
+                                                    id="ConvertedtoJudaism">
+                                                <label class="form-check-label" for="ConvertedtoJudaism">
+                                                    Converted to Judaism
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Jewis"
+                                                    id="Inconversionprocess">
+                                                <label class="form-check-label" for="Inconversionprocess">
+                                                    In conversion process
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Jewis"
+                                                    id="NotJewishcuriousaboutJudaism">
+                                                <label class="form-check-label" for="NotJewishcuriousaboutJudaism">
+                                                    Not Jewish, curious about Judaism
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <span class="previous-step previous_btn"><i
+                                            class="ti ti-chevron-left ti-xs"></i></span>
+                                    <input type="button" name="next-step" class="next-step next_btn"
+                                        value="Continue >" />
+
+                                </fieldset>
+                                <!-----End step 4-->
+                                <!----Start step 5-->
+                                <fieldset class="max_830">
+                                    <div class="step_head_img"><img src="assets/img/justonething/step3head.png"
+                                            alt="image"></div>
+
+                                    <p class="step_title">
+                                        I identify as</p>
+                                    <div class="sum_flex mb-5">
+                                        <div class="sum_div">
+                                            <div class="fields">
+
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="radio" name="identifyas"
+                                                            id="Unaffiliated">
+                                                        <label class="form-check-label" for="Unaffiliated">
+                                                            Unaffiliated
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="radio" name="identifyas"
+                                                            id="Reform">
+                                                        <label class="form-check-label" for="Reform">
+                                                            Reform
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="radio" name="identifyas"
+                                                            id="Reconstructionist">
+                                                        <label class="form-check-label" for="Reconstructionist">
+                                                            Reconstructionist
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="radio" name="identifyas"
+                                                            id="Renewal">
+                                                        <label class="form-check-label" for="Renewal">
+                                                            Renewal
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="sum_div">
+                                            <div class="fields">
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="radio" name="identifyas"
+                                                            id="Messianic">
+                                                        <label class="form-check-label" for="Messianic">
+                                                            Messianic
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="radio" name="identifyas"
+                                                            id="Conservative">
+                                                        <label class="form-check-label" for="Conservative">
+                                                            Conservative
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="radio" name="identifyas"
+                                                            id="Orthodox">
+                                                        <label class="form-check-label" for="Orthodox">
+                                                            Orthodox
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="radio" name="identifyas"
+                                                            id="Not Jewish">
+                                                        <label class="form-check-label" for="Not Jewish">
+                                                            Not Jewish
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="previous-step previous_btn"><i
+                                            class="ti ti-chevron-left ti-xs"></i></span>
+                                    <input type="button" name="next-step" class="next-step next_btn"
+                                        value="Continue >" />
+
+                                </fieldset>
+                                <!----End step 5-->
+                                <!--Start step 6-->
+                                <fieldset>
+                                    <div class="step_head_img"><img src="assets/img/justonething/step7head.png"
+                                            alt="image"></div>
+
+                                    <p class="step_title">
+                                        My dad is</p>
+                                    <div class="fields">
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Mydadis"
+                                                    id="BornJewishs">
+                                                <label class="form-check-label" for="BornJewishs">
+                                                    Born Jewish
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Mydadis"
+                                                    id="ConvertedtoJudaisms">
+                                                <label class="form-check-label" for="ConvertedtoJudaisms">
+                                                    Converted to Judaism
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Mydadis" id="Unsure">
+                                                <label class="form-check-label" for="Unsure">
+                                                    Unsure
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-5">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Mydadis"
+                                                    id="NotJewishs">
+                                                <label class="form-check-label" for="NotJewishs">
+                                                    Not Jewish
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <span class="previous-step previous_btn"><i
+                                            class="ti ti-chevron-left ti-xs"></i></span>
+                                    <input type="button" name="next-step" class="next-step next_btn"
+                                        value="Continue >" />
+
+                                </fieldset>
+                                <!-----End step 6-->
+                                <!--Start step 7-->
+                                <fieldset>
+                                    <div class="step_head_img"><img src="assets/img/justonething/step8head.png"
+                                            alt="image"></div>
+
+                                    <p class="step_title">
+                                        My mom is</p>
+                                    <div class="fields">
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Mymomis"
+                                                    id="BornJewishm">
+                                                <label class="form-check-label" for="BornJewishm">
+                                                    Born Jewish
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Mymomis"
+                                                    id="ConvertedtoJudaismm">
+                                                <label class="form-check-label" for="ConvertedtoJudaismm">
+                                                    Converted to Judaism
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Mymomis"
+                                                    id="Unsurem">
+                                                <label class="form-check-label" for="Unsurem">
+                                                    Unsure
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+                                        <div class="mb-5">
+                                            <div class="form-check radio_btn">
+                                                <input class="form-check-input" type="radio" name="Mymomis"
+                                                    id="NotJewishm">
+                                                <label class="form-check-label" for="NotJewishm">
+                                                    Not Jewish
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                error message
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <span class="previous-step previous_btn"><i
+                                            class="ti ti-chevron-left ti-xs"></i></span>
+                                    <input type="button" name="next-step" class="next-step next_btn"
+                                        value="Continue >" />
+
+                                </fieldset>
+                                <!-----End step 7-->
+                                <!----Start step 8-->
+                                <fieldset class="max_830">
+                                    <div class="step_head_img"><img src="assets/img/justonething/step9head.png"
+                                            alt="image"></div>
+
+                                    <p class="step_title">My availability</p>
+                                    <div class="sum_flex mb-5">
+                                        <div class="sum_div">
+                                            <div class="fields">
+
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="availability" id="Sunday">
+                                                        <label class="form-check-label" for="Sunday">
+                                                            Sundays
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="availability" id="Mondays">
+                                                        <label class="form-check-label" for="Mondays">
+                                                            Mondays
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="availability" id="TuesDays">
+                                                        <label class="form-check-label" for="TuesDays">
+                                                            TuesDays
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="availability" id="Wednesdays">
+                                                        <label class="form-check-label" for="Wednesdays">
+                                                            Wednesdays
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sum_div">
+                                            <div class="fields">
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="availability" id="Thursdays">
+                                                        <label class="form-check-label" for="Thursdays">
+                                                            Thursdays
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="availability" id="Fridays">
+                                                        <label class="form-check-label" for="Fridays">
+                                                            Fridays
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <div class="form-check radio_btn">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="availability" id="Saturdays">
+                                                        <label class="form-check-label" for="Saturdays">
+                                                            Saturdays
+                                                        </label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        error message
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="previous-step previous_btn"><i
+                                            class="ti ti-chevron-left ti-xs"></i></span>
+                                    <input type="button" name="next-step" class="next-step next_btn"
+                                        value="Continue >" />
+
+                                </fieldset>
+                                <!----End step 8-->
+                                <!-- <fieldset>
+                                    <div class="finish">
+                                        <h2 class="text text-center">
+                                            <strong>FINISHED</strong>
+                                        </h2>
+                                    </div>
+                                    <input type="button" name="previous-step" class="previous-step"
+                                        value="Previous Step" />
+                                </fieldset> -->
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var currentGfgStep, nextGfgStep, previousGfgStep;
+            var opacity;
+            var current = 1;
+            var steps = $("fieldset").length;
+
+            setProgressBar(current);
+
+            $(".next-step").click(function () {
+
+                currentGfgStep = $(this).parent();
+                nextGfgStep = $(this).parent().next();
+
+                $("#progressbar li").eq($("fieldset")
+                    .index(nextGfgStep)).addClass("active");
+
+                nextGfgStep.show();
+                currentGfgStep.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+
+                        currentGfgStep.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        nextGfgStep.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(++current);
+            });
+
+            $(".previous-step").click(function () {
+
+                currentGfgStep = $(this).parent();
+                previousGfgStep = $(this).parent().prev();
+
+                $("#progressbar li").eq($("fieldset")
+                    .index(currentGfgStep)).removeClass("active");
+
+                previousGfgStep.show();
+
+                currentGfgStep.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+
+                        currentGfgStep.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previousGfgStep.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(--current);
+            });
+
+            function setProgressBar(currentStep) {
+                var percent = parseFloat(100 / steps) * current;
+                percent = percent.toFixed();
+                $(".progress-bar")
+                    .css("width", percent + "%")
+            }
+            $(".submit").click(function () {
+                return false;
+            })
+        });
+
+    </script>
+    <script>
+        function showStudy() {
+            document.getElementById('showStudy').style.display = 'none';
+            document.getElementById('showTeach').style.display = 'block';
+        }
+        function showTeach() {
+            document.getElementById('showTeach').style.display = 'none';
+            document.getElementById('showStudy').style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
