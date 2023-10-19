@@ -385,7 +385,11 @@ label small {
   left: 10px;
 }
 
-@media screen and (min-width: 768px) {
+.header-mobile {
+  background-position: center bottom !important;
+}
+
+@media screen and (min-width: 990px) {
   .right_content {
     height: 100%;
   }
@@ -393,11 +397,23 @@ label small {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 550px) and (max-width: 990px) {
+.header-mobile {
+  height: 250px !important;
+  background-position: center bottom !important;
+}
+}
+
+@media screen and (max-width: 990px) {
   .name-pill {
     width: 50%;
     margin: 10px auto;
   }
+
+  .accordion .accordion-button {
+    width: 100%;
+  }
+
     #form fieldset .sum_flex {
         flex-direction: column;
     }
