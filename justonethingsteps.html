@@ -18,14 +18,13 @@
             <div class="row">
                 <div class="col-md-5 col-xs-12 px-0 position-relative text-left text-sm-center">
                     <!-- <img src="assets/img/justonething/jotbanner.png" alt="image" class="w-100 vh-100 d-mob-none"> -->
-                    <div style="background-image: url(assets/img/justonething/jotbanner.png); background-size: cover; background-position: center; background-repeat: no-repeat;" class="w-100 vh-100 d-mob-none"></div>
+                    <div style="background-image: url(assets/img/justonething/jotbanner.png); background-size: cover; background-position: center; background-repeat: no-repeat;"
+                        class="w-100 vh-100 d-mob-none"></div>
 
-                    <img src="assets/img/justonething/jotbanner_mob_steps_head.png" alt="image"
-                        class="w-100 d-desk-none mxh-115">
-                    <div class="layer_content d-desk-none w-100">
-                        <img src="assets/img/justonething/partner_logo.png" alt="image">
 
-                    </div>
+                        <div style="height: 115px ;background-image: url(assets/img/justonething/jotbanner_mob_steps_head.png); background-size: cover; background-position: center; background-repeat: no-repeat;"
+                        class="w-100 d-desk-none mxh-115"></div>
+
                 </div>
                 <div class="col-md-7 col-xs-12 text-black">
 
@@ -45,7 +44,6 @@
                                     <li id="step6">&nbsp;</li>
                                     <li id="step7">&nbsp;</li>
                                     <li id="step8">&nbsp;</li>
-                                    <!-- <li id="step9">&nbsp;</li> -->
                                 </ul>
                                 <!-----Start step 1-->
                                 <fieldset>
@@ -56,7 +54,7 @@
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
                                                 <input class="form-check-input" type="radio" name="teach" id="teach"
-                                                    onclick="showTeach();">
+                                                    onclick="showTeach();" value="teach">
                                                 <label class=" form-check-label" for="teach">
                                                     Teach
                                                 </label>
@@ -69,7 +67,7 @@
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
                                                 <input class="form-check-input" type="radio" name="teach" id="Study"
-                                                    onclick="showStudy();">
+                                                    onclick="showStudy();" value="study">
                                                 <label class="form-check-label" for="Study">
                                                     Study
                                                 </label>
@@ -82,7 +80,7 @@
                                         <div class="mb-5">
                                             <div class="form-check radio_btn">
                                                 <input class="form-check-input" type="radio" name="teach"
-                                                    id="Study-torah">
+                                                    id="Study-torah" onclick="shoPartnership();" value="studyPartner">
                                                 <label class="form-check-label" for="Study-torah">
                                                     Study with my current partner in Torah
                                                 </label>
@@ -94,13 +92,14 @@
                                         </div>
                                     </div>
 
-                                    <span class="previous_btn"><i class="ti ti-chevron-left ti-xs"></i></span>
+                                    <span class="previous_btn pe-none opacity-25"><i
+                                            class="ti ti-chevron-left ti-xs"></i></span>
                                     <input type="button" name="next-step" class="next-step next_btn"
                                         value="Continue >" />
                                 </fieldset>
                                 <!-----End step 1-->
                                 <!--Start step 2-->
-                                <fieldset>
+                                <fieldset class="max_830">
                                     <div class="step_head_img"><img src="assets/img/justonething/step2head.png"
                                             alt="image"></div>
                                     <div id="showTeach">
@@ -110,9 +109,9 @@
                                         <div class="fields">
                                             <div class="mb-2">
                                                 <div class="form-check radio_btn">
-                                                    <input class="form-check-input" type="radio" name="matcheyes"
-                                                        id="matcheyes">
-                                                    <label class="form-check-label" for="matcheyes">
+                                                    <input class="form-check-input" type="radio" name="matcheyes1"
+                                                        id="matcheyes1" value="teach_yes">
+                                                    <label class="form-check-label" for="matcheyes1">
                                                         Yes
                                                     </label>
                                                 </div>
@@ -122,9 +121,9 @@
                                             </div>
                                             <div class="mb-5">
                                                 <div class="form-check radio_btn">
-                                                    <input class="form-check-input" type="radio" name="matcheyes"
-                                                        id="matcheno">
-                                                    <label class="form-check-label" for="matcheno">
+                                                    <input class="form-check-input" type="radio" name="matcheyes1"
+                                                        id="matcheno1" value="teach_no">
+                                                    <label class="form-check-label" for="matcheno1">
                                                         No
                                                     </label>
                                                 </div>
@@ -141,7 +140,7 @@
                                             <div class="mb-2">
                                                 <div class="form-check radio_btn">
                                                     <input class="form-check-input" type="radio" name="matcheyes"
-                                                        id="matcheyes">
+                                                        id="matcheyes" value="study_yes">
                                                     <label class="form-check-label" for="matcheyes">
                                                         Yes
                                                     </label>
@@ -153,7 +152,7 @@
                                             <div class="mb-5">
                                                 <div class="form-check radio_btn">
                                                     <input class="form-check-input" type="radio" name="matcheyes"
-                                                        id="matcheno">
+                                                        id="matcheno" value="study_no">
                                                     <label class="form-check-label" for="matcheno">
                                                         No
                                                     </label>
@@ -164,12 +163,50 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="showPartnership" style="display: none;">
+                                        <p class="step_title">Tell us about your partnership.</p>
+                                        <div class="sum_flex mb-5">
+                                            <div class="sum_div">
+                                                <div class="fields">
+                                                    <div class="form-check mb-2">
+                                                        <input type="text" class="form-control" name="partner_firstname" 
+                                                            placeholder="Your partner's first name*" />
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
+                                                    </div>
 
-                                    <span class="previous-step previous_btn"><i
-                                            class="ti ti-chevron-left ti-xs"></i></span>
-                                    <input type="button" name="next-step" class="next-step next_btn"
-                                        value="Continue >" />
+                                                    <div class="form-check mb-2">
+                                                        <input type="email" class="form-control" name="partner_email"
+                                                            placeholder="Your partner email address*" />
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
+                                                    </div>
+ 
 
+                                                </div>
+                                            </div>
+                                            <div class="sum_div">
+                                                <div class="fields">
+                                                    <div class="form-check mb-2">
+                                                        <input type="text" class="form-control" name="partner_lastname"
+                                                            placeholder="Your partner's last name*" />
+
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly">
+                                        <span class="previous-step previous_btn"><i
+                                                class="ti ti-chevron-left ti-xs"></i></span>
+                                        <input type="button" name="next-step" class="next-step next_btn"
+                                            value="Continue >" />
+                                    </div>
                                 </fieldset>
                                 <!-----End step 2-->
                                 <!----Start step 3-->
@@ -184,21 +221,20 @@
                                             <div class="fields">
 
                                                 <div class="form-check mb-2">
-                                                    <input type="text" class="form-control" placeholder="First name*" />
+                                                    <input type="text" class="form-control" placeholder="First name*" name="firstname" required/>
                                                 </div>
                                                 <div class="invalid-feedback">
                                                     error message
                                                 </div>
 
                                                 <div class="form-check mb-2">
-                                                    <input type="text" class="form-control" placeholder="Last name*"
-                                                        </div>
+                                                    <input type="text" class="form-control" placeholder="Last name*" name="lastname" required/>
                                                     <div class="invalid-feedback">
                                                         error message
                                                     </div>
                                                 </div>
                                                 <div class="form-check mb-2">
-                                                    <select class="form-control">
+                                                    <select class="form-control" name="gender">
                                                         <option>Gender</option>
                                                         <option>Male</option>
                                                         <option>Female</option>
@@ -208,11 +244,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-check mb-2">
-                                                    <select class="form-control">
-                                                        <option>Date of birth</option>
-                                                        <option>20/10/2023</option>
-                                                        <option>20/10/2023</option>
-                                                    </select>
+                                                   <input type="text" class="form-control" placeholder="Date of birth"     onfocus="(this.type='date')"
+                                                   onblur="(this.type='text')">
                                                     <div class="invalid-feedback">
                                                         error message
                                                     </div>
@@ -222,7 +255,7 @@
                                         <div class="sum_div">
                                             <div class="fields">
                                                 <div class="form-check mb-2">
-                                                    <select class="form-control">
+                                                    <select class="form-control" name="country">
                                                         <option>Country</option>
                                                         <option>India</option>
                                                         <option>America</option>
@@ -233,21 +266,21 @@
                                                 </div>
                                                 <div class="form-check mb-2">
                                                     <input type="text" class="form-control"
-                                                        placeholder="Zip / Postal code" </div>
+                                                        placeholder="Zip / Postal code"  name="postcode"/>
                                                     <div class="invalid-feedback">
                                                         error message
                                                     </div>
                                                 </div>
                                                 <div class="form-check mb-2">
-                                                    <input type="email" class="form-control" placeholder="Email address"
-                                                        </div>
+                                                    <input type="email" class="form-control"
+                                                        placeholder="Email address*" name="email" required/>
                                                     <div class="invalid-feedback">
                                                         error message
                                                     </div>
                                                 </div>
                                                 <div class="form-check mb-2">
-                                                    <input type="text" class="form-control" placeholder="Phone number"
-                                                        </div>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Phone number" name="phone"/>
                                                     <div class="invalid-feedback">
                                                         error message
                                                     </div>
@@ -255,10 +288,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <span class="previous-step previous_btn"><i
-                                            class="ti ti-chevron-left ti-xs"></i></span>
-                                    <input type="button" name="next-step" class="next-step next_btn"
-                                        value="Continue >" />
+                                    <div class="d-flex justify-content-evenly">
+                                        <span class="previous-step previous_btn"><i
+                                                class="ti ti-chevron-left ti-xs"></i></span>
+                                        <input type="button" name="next-step" class="next-step next_btn"
+                                            value="Continue >" />
+                                    </div>
 
                                 </fieldset>
                                 <!----End step 3-->
@@ -271,8 +306,8 @@
                                     <div class="fields">
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Jewis"
-                                                    id="BornJewish">
+                                                <input class="form-check-input" type="radio" name="heritage"
+                                                    id="BornJewish" value="BornJewish">
                                                 <label class="form-check-label" for="BornJewish">
                                                     Born Jewish
                                                 </label>
@@ -283,8 +318,8 @@
                                         </div>
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Jewis"
-                                                    id="ConvertedtoJudaism">
+                                                <input class="form-check-input" type="radio" name="heritage"
+                                                    id="ConvertedtoJudaism" value="ConvertedtoJudaism">
                                                 <label class="form-check-label" for="ConvertedtoJudaism">
                                                     Converted to Judaism
                                                 </label>
@@ -295,8 +330,8 @@
                                         </div>
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Jewis"
-                                                    id="Inconversionprocess">
+                                                <input class="form-check-input" type="radio" name="heritage"
+                                                    id="Inconversionprocess" value="Inconversionprocess">
                                                 <label class="form-check-label" for="Inconversionprocess">
                                                     In conversion process
                                                 </label>
@@ -308,8 +343,8 @@
 
                                         <div class="mb-5">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Jewis"
-                                                    id="NotJewishcuriousaboutJudaism">
+                                                <input class="form-check-input" type="radio" name="heritage"
+                                                    id="NotJewishcuriousaboutJudaism" value="NotJewishcuriousaboutJudaism">
                                                 <label class="form-check-label" for="NotJewishcuriousaboutJudaism">
                                                     Not Jewish, curious about Judaism
                                                 </label>
@@ -342,8 +377,8 @@
 
                                                 <div class="mb-2">
                                                     <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="radio" name="identifyas"
-                                                            id="Unaffiliated">
+                                                        <input class="form-check-input" type="radio" name="identify"
+                                                            id="Unaffiliated" value="Unaffiliated">
                                                         <label class="form-check-label" for="Unaffiliated">
                                                             Unaffiliated
                                                         </label>
@@ -355,8 +390,8 @@
 
                                                 <div class="mb-2">
                                                     <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="radio" name="identifyas"
-                                                            id="Reform">
+                                                        <input class="form-check-input" type="radio" name="identify"
+                                                            id="Reform" value="Reform">
                                                         <label class="form-check-label" for="Reform">
                                                             Reform
                                                         </label>
@@ -367,8 +402,8 @@
                                                 </div>
                                                 <div class="mb-2">
                                                     <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="radio" name="identifyas"
-                                                            id="Reconstructionist">
+                                                        <input class="form-check-input" type="radio" name="identify"
+                                                            id="Reconstructionist" value="Reconstructionist">
                                                         <label class="form-check-label" for="Reconstructionist">
                                                             Reconstructionist
                                                         </label>
@@ -379,8 +414,8 @@
                                                 </div>
                                                 <div class="mb-2">
                                                     <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="radio" name="identifyas"
-                                                            id="Renewal">
+                                                        <input class="form-check-input" type="radio" name="identify"
+                                                            id="Renewal" value="Renewal">
                                                         <label class="form-check-label" for="Renewal">
                                                             Renewal
                                                         </label>
@@ -397,8 +432,8 @@
                                             <div class="fields">
                                                 <div class="mb-2">
                                                     <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="radio" name="identifyas"
-                                                            id="Messianic">
+                                                        <input class="form-check-input" type="radio" name="identify"
+                                                            id="Messianic" value="Messianic">
                                                         <label class="form-check-label" for="Messianic">
                                                             Messianic
                                                         </label>
@@ -409,8 +444,8 @@
                                                 </div>
                                                 <div class="mb-2">
                                                     <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="radio" name="identifyas"
-                                                            id="Conservative">
+                                                        <input class="form-check-input" type="radio" name="identify"
+                                                            id="Conservative" value="Conservative">
                                                         <label class="form-check-label" for="Conservative">
                                                             Conservative
                                                         </label>
@@ -422,8 +457,8 @@
 
                                                 <div class="mb-2">
                                                     <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="radio" name="identifyas"
-                                                            id="Orthodox">
+                                                        <input class="form-check-input" type="radio" name="identify"
+                                                            id="Orthodox" value="Orthodox">
                                                         <label class="form-check-label" for="Orthodox">
                                                             Orthodox
                                                         </label>
@@ -434,9 +469,9 @@
                                                 </div>
                                                 <div class="mb-2">
                                                     <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="radio" name="identifyas"
-                                                            id="Not Jewish">
-                                                        <label class="form-check-label" for="Not Jewish">
+                                                        <input class="form-check-input" type="radio" name="identify"
+                                                            id="NotJewish" value="NotJewish">
+                                                        <label class="form-check-label" for="NotJewish">
                                                             Not Jewish
                                                         </label>
                                                     </div>
@@ -448,11 +483,12 @@
                                         </div>
                                     </div>
 
-                                    <span class="previous-step previous_btn"><i
-                                            class="ti ti-chevron-left ti-xs"></i></span>
-                                    <input type="button" name="next-step" class="next-step next_btn"
-                                        value="Continue >" />
-
+                                    <div class="d-flex justify-content-evenly">
+                                        <span class="previous-step previous_btn"><i
+                                                class="ti ti-chevron-left ti-xs"></i></span>
+                                        <input type="button" name="next-step" class="next-step next_btn"
+                                            value="Continue >" />
+                                    </div>
                                 </fieldset>
                                 <!----End step 5-->
                                 <!--Start step 6-->
@@ -465,8 +501,8 @@
                                     <div class="fields">
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Mydadis"
-                                                    id="BornJewishs">
+                                                <input class="form-check-input" type="radio" name="dad"
+                                                    id="BornJewishs" value="BornJewishs">
                                                 <label class="form-check-label" for="BornJewishs">
                                                     Born Jewish
                                                 </label>
@@ -477,8 +513,8 @@
                                         </div>
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Mydadis"
-                                                    id="ConvertedtoJudaisms">
+                                                <input class="form-check-input" type="radio" name="dad"
+                                                    id="ConvertedtoJudaisms" value="ConvertedtoJudaisms">
                                                 <label class="form-check-label" for="ConvertedtoJudaisms">
                                                     Converted to Judaism
                                                 </label>
@@ -489,7 +525,7 @@
                                         </div>
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Mydadis" id="Unsure">
+                                                <input class="form-check-input" type="radio" name="dad" id="Unsure" value="Unsure">
                                                 <label class="form-check-label" for="Unsure">
                                                     Unsure
                                                 </label>
@@ -500,8 +536,8 @@
                                         </div>
                                         <div class="mb-5">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Mydadis"
-                                                    id="NotJewishs">
+                                                <input class="form-check-input" type="radio" name="dad"
+                                                    id="NotJewishs" value="NotJewishs">
                                                 <label class="form-check-label" for="NotJewishs">
                                                     Not Jewish
                                                 </label>
@@ -531,8 +567,8 @@
                                     <div class="fields">
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Mymomis"
-                                                    id="BornJewishm">
+                                                <input class="form-check-input" type="radio" name="mom"
+                                                    id="BornJewishm" value="BornJewishm">
                                                 <label class="form-check-label" for="BornJewishm">
                                                     Born Jewish
                                                 </label>
@@ -543,8 +579,8 @@
                                         </div>
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Mymomis"
-                                                    id="ConvertedtoJudaismm">
+                                                <input class="form-check-input" type="radio" name="mom"
+                                                    id="ConvertedtoJudaismm" value="ConvertedtoJudaismm">
                                                 <label class="form-check-label" for="ConvertedtoJudaismm">
                                                     Converted to Judaism
                                                 </label>
@@ -555,8 +591,8 @@
                                         </div>
                                         <div class="mb-2">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Mymomis"
-                                                    id="Unsurem">
+                                                <input class="form-check-input" type="radio" name="mom"
+                                                    id="Unsurem" value="Unsurem">
                                                 <label class="form-check-label" for="Unsurem">
                                                     Unsure
                                                 </label>
@@ -567,8 +603,8 @@
                                         </div>
                                         <div class="mb-5">
                                             <div class="form-check radio_btn">
-                                                <input class="form-check-input" type="radio" name="Mymomis"
-                                                    id="NotJewishm">
+                                                <input class="form-check-input" type="radio" name="mom"
+                                                    id="NotJewishm" value="NotJewishm">
                                                 <label class="form-check-label" for="NotJewishm">
                                                     Not Jewish
                                                 </label>
@@ -583,7 +619,7 @@
 
                                     <span class="previous-step previous_btn"><i
                                             class="ti ti-chevron-left ti-xs"></i></span>
-                                    <input type="button" name="next-step" class="next-step next_btn"
+                                    <input type="button" name="next-step" class="next-step next_btn "
                                         value="Continue >" />
 
                                 </fieldset>
@@ -593,119 +629,769 @@
                                     <div class="step_head_img"><img src="assets/img/justonething/step9head.png"
                                             alt="image"></div>
 
-                                    <p class="step_title">My availability</p>
-                                    <div class="sum_flex mb-5">
-                                        <div class="sum_div">
-                                            <div class="fields">
+                                    <p class="step_title">I'm generally available to study at these times</p>
+                                    <div class="d-mob-none">
+                                        <div class="d-flex justify-content-between day-wrapper flex-wrap">
 
-                                                <div class="mb-2">
-                                                    <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            name="availability" id="Sunday">
-                                                        <label class="form-check-label" for="Sunday">
-                                                            Sundays
-                                                        </label>
+                                            <div class="name-pill" data-day="sunday">Sun</div>
+    
+                                            <div class="name-pill" data-day="monday">Mon</div>
+    
+                                            <div class="name-pill" data-day="tuesday">Tue</div>
+    
+                                            <div class="name-pill" data-day="wednesday">Wed</div>
+    
+                                            <div class="name-pill" data-day="thursday">Thu</div>
+    
+                                            <div class="name-pill" data-day="friday">Fri</div>
+    
+                                            <div class="name-pill" data-day="saturday">Sat</div>
+                                        </div>
+                                        <p class="mt-5">Select your timeslot</p>
+    
+                                        <div class="sum_flex flex-wrap mb-5 mt-2 timeslots-wrapper">
+                                            <div class="sum_div me-2">
+                                                <div class="fields">
+    
+                                                    <div class="mb-2">
+                                                        <div class="form-check radio_btn">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="availability" id="Earlybird">
+                                                            <label class="form-check-label" for="Earlybird">
+                                                                Early birds<br /><small>5:00 AM - 8:00 AM</small>
+                                                            </label>
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
                                                     </div>
-                                                    <div class="invalid-feedback">
-                                                        error message
+                                                    <div class="mb-2">
+                                                        <div class="form-check radio_btn">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="availability" id="Afternoon">
+                                                            <label class="form-check-label" for="Afternoon">
+                                                                Afternoon<br /><small>2:00 PM - 6:00 PM</small>
+                                                            </label>
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
                                                     </div>
+    
                                                 </div>
-                                                <div class="mb-2">
-                                                    <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            name="availability" id="Mondays">
-                                                        <label class="form-check-label" for="Mondays">
-                                                            Mondays
-                                                        </label>
+                                            </div>
+                                            <div class="sum_div me-2">
+                                                <div class="fields">
+                                                    <div class="mb-2">
+                                                        <div class="form-check radio_btn">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="availability" id="Morning">
+                                                            <label class="form-check-label" for="Morning">
+                                                                Morning<br /><small>8:00 AM - 11:00 AM</small>
+                                                            </label>
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
                                                     </div>
-                                                    <div class="invalid-feedback">
-                                                        error message
-                                                    </div>
-                                                </div>
-                                                <div class="mb-2">
-                                                    <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            name="availability" id="TuesDays">
-                                                        <label class="form-check-label" for="TuesDays">
-                                                            TuesDays
-                                                        </label>
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        error message
-                                                    </div>
-                                                </div>
-                                                <div class="mb-2">
-                                                    <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            name="availability" id="Wednesdays">
-                                                        <label class="form-check-label" for="Wednesdays">
-                                                            Wednesdays
-                                                        </label>
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        error message
+                                                    <div class="mb-2">
+                                                        <div class="form-check radio_btn">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="availability" id="Evening">
+                                                            <label class="form-check-label" for="Evening">
+                                                                Evening<br /><small>6:00 PM - 10:00 PM</small>
+                                                            </label>
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="sum_div">
-                                            <div class="fields">
-                                                <div class="mb-2">
-                                                    <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            name="availability" id="Thursdays">
-                                                        <label class="form-check-label" for="Thursdays">
-                                                            Thursdays
-                                                        </label>
+                                            <div class="sum_div">
+                                                <div class="fields">
+                                                    <div class="mb-2">
+                                                        <div class="form-check radio_btn">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="availability" id="LunchBreak">
+                                                            <label class="form-check-label" for="LunchBreak">
+                                                                Lunch Break<br /><small>11:00 PM - 2:00 PM</small>
+                                                            </label>
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
                                                     </div>
-                                                    <div class="invalid-feedback">
-                                                        error message
+                                                    <div class="mb-2">
+                                                        <div class="form-check radio_btn">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="availability" id="NightOwl">
+                                                            <label class="form-check-label" for="NightOwl">
+                                                                Night Owl<br /><small>10:00 PM - 12:00 AM</small>
+                                                            </label>
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            error message
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="mb-2">
-                                                    <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            name="availability" id="Fridays">
-                                                        <label class="form-check-label" for="Fridays">
-                                                            Fridays
-                                                        </label>
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        error message
-                                                    </div>
-                                                </div>
-                                                <div class="mb-2">
-                                                    <div class="form-check radio_btn">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            name="availability" id="Saturdays">
-                                                        <label class="form-check-label" for="Saturdays">
-                                                            Saturdays
-                                                        </label>
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        error message
-                                                    </div>
+    
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <span class="previous-step previous_btn"><i
-                                            class="ti ti-chevron-left ti-xs"></i></span>
-                                    <input type="button" name="next-step" class="next-step next_btn"
-                                        value="Continue >" />
+                                    <div class="d-desk-none mb-5">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button data-day="sunday" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                  Sundays
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                     <div class="sum_flex flex-wrap mb-5 mt-2 timeslots-wrapper" data-day="sunday">
+                                                        <div class="sum_div me-2">
+                                                            <div class="fields">
+                
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Earlybird0">
+                                                                        <label class="form-check-label" for="Earlybird0">
+                                                                            Early birds<br /><small>5:00 AM - 8:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Morning0">
+                                                                        <label class="form-check-label" for="Morning0">
+                                                                            Morning<br /><small>8:00 AM - 11:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="LunchBreak0">
+                                                                        <label class="form-check-label" for="LunchBreak0">
+                                                                            Lunch Break<br /><small>11:00 PM - 2:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Afternoon0">
+                                                                        <label class="form-check-label" for="Afternoon0">
+                                                                            Afternoon<br /><small>2:00 PM - 6:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Evening0">
+                                                                        <label class="form-check-label" for="Evening0">
+                                                                            Evening<br /><small>6:00 PM - 10:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="NightOwl0">
+                                                                        <label class="form-check-label" for="NightOwl0">
+                                                                            Night Owl<br /><small>10:00 PM - 12:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button data-day="monday" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                  Mondays
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="sum_flex flex-wrap mb-5 mt-2 timeslots-wrapper" data-day="monday">
+                                                        <div class="sum_div me-2">
+                                                            <div class="fields">
+                
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Earlybird1">
+                                                                        <label class="form-check-label" for="Earlybird1">
+                                                                            Early birds<br /><small>5:00 AM - 8:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Morning1">
+                                                                        <label class="form-check-label" for="Morning1">
+                                                                            Morning<br /><small>8:00 AM - 11:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="LunchBreak1">
+                                                                        <label class="form-check-label" for="LunchBreak1">
+                                                                            Lunch Break<br /><small>11:00 PM - 2:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Afternoon1">
+                                                                        <label class="form-check-label" for="Afternoon1">
+                                                                            Afternoon<br /><small>2:00 PM - 6:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Evening1">
+                                                                        <label class="form-check-label" for="Evening1">
+                                                                            Evening<br /><small>6:00 PM - 10:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="NightOwl1">
+                                                                        <label class="form-check-label" for="NightOwl1">
+                                                                            Night Owl<br /><small>10:00 PM - 12:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button data-day="tuesday" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                  Tuesdays
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="sum_flex flex-wrap mb-5 mt-2 timeslots-wrapper" data-day="tuesday">
+                                                        <div class="sum_div me-2">
+                                                            <div class="fields">
+                
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Earlybird2">
+                                                                        <label class="form-check-label" for="Earlybird2">
+                                                                            Early birds<br /><small>5:00 AM - 8:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Morning2">
+                                                                        <label class="form-check-label" for="Morning2">
+                                                                            Morning<br /><small>8:00 AM - 11:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="LunchBreak2">
+                                                                        <label class="form-check-label" for="LunchBreak2">
+                                                                            Lunch Break<br /><small>11:00 PM - 2:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Afternoon2">
+                                                                        <label class="form-check-label" for="Afternoon2">
+                                                                            Afternoon<br /><small>2:00 PM - 6:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Evening2">
+                                                                        <label class="form-check-label" for="Evening2">
+                                                                            Evening<br /><small>6:00 PM - 10:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="NightOwl2">
+                                                                        <label class="form-check-label" for="NightOwl2">
+                                                                            Night Owl<br /><small>10:00 PM - 12:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button data-day="wednesday" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                                  Wednesdays
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="sum_flex flex-wrap mb-5 mt-2 timeslots-wrapper" data-day="wednesday">
+                                                        <div class="sum_div me-2">
+                                                            <div class="fields">
+                
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Earlybird3">
+                                                                        <label class="form-check-label" for="Earlybird3">
+                                                                            Early birds<br /><small>5:00 AM - 8:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Morning3">
+                                                                        <label class="form-check-label" for="Morning3">
+                                                                            Morning<br /><small>8:00 AM - 11:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="LunchBreak3">
+                                                                        <label class="form-check-label" for="LunchBreak3">
+                                                                            Lunch Break<br /><small>11:00 PM - 2:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Afternoon3">
+                                                                        <label class="form-check-label" for="Afternoon3">
+                                                                            Afternoon<br /><small>2:00 PM - 6:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Evening3">
+                                                                        <label class="form-check-label" for="Evening3">
+                                                                            Evening<br /><small>6:00 PM - 10:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="NightOwl3">
+                                                                        <label class="form-check-label" for="NightOwl3">
+                                                                            Night Owl<br /><small>10:00 PM - 12:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button data-day="thursday" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                                  Thursdays
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="sum_flex flex-wrap mb-5 mt-2 timeslots-wrapper" data-day="thursday">
+                                                        <div class="sum_div me-2">
+                                                            <div class="fields">
+                
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Earlybird4">
+                                                                        <label class="form-check-label" for="Earlybird4">
+                                                                            Early birds<br /><small>5:00 AM - 8:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Morning4">
+                                                                        <label class="form-check-label" for="Morning4">
+                                                                            Morning<br /><small>8:00 AM - 11:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="LunchBreak4">
+                                                                        <label class="form-check-label" for="LunchBreak4">
+                                                                            Lunch Break<br /><small>11:00 PM - 2:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Afternoon4">
+                                                                        <label class="form-check-label" for="Afternoon4">
+                                                                            Afternoon<br /><small>2:00 PM - 6:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Evening4">
+                                                                        <label class="form-check-label" for="Evening4">
+                                                                            Evening<br /><small>6:00 PM - 10:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="NightOwl4">
+                                                                        <label class="form-check-label" for="NightOwl4">
+                                                                            Night Owl<br /><small>10:00 PM - 12:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button data-day="friday" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                                  Fridays
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="sum_flex flex-wrap mb-5 mt-2 timeslots-wrapper" data-day="friday">
+                                                        <div class="sum_div me-2">
+                                                            <div class="fields">
+                
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Earlybird5">
+                                                                        <label class="form-check-label" for="Earlybird5">
+                                                                            Early birds<br /><small>5:00 AM - 8:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Morning5">
+                                                                        <label class="form-check-label" for="Morning5">
+                                                                            Morning<br /><small>8:00 AM - 11:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="LunchBreak5">
+                                                                        <label class="form-check-label" for="LunchBreak5">
+                                                                            Lunch Break<br /><small>11:00 PM - 2:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Afternoon5">
+                                                                        <label class="form-check-label" for="Afternoon5">
+                                                                            Afternoon<br /><small>2:00 PM - 6:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Evening5">
+                                                                        <label class="form-check-label" for="Evening5">
+                                                                            Evening<br /><small>6:00 PM - 10:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="NightOwl5">
+                                                                        <label class="form-check-label" for="NightOwl5">
+                                                                            Night Owl<br /><small>10:00 PM - 12:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button data-day="saturday" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSevem" aria-expanded="false" aria-controls="flush-collapseSevem">
+                                                  Saturdays
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseSevem" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="sum_flex flex-wrap mb-5 mt-2 timeslots-wrapper" data-day="saturday">
+                                                        <div class="sum_div me-2">
+                                                            <div class="fields">
+                
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Earlybird6">
+                                                                        <label class="form-check-label" for="Earlybird6">
+                                                                            Early birds<br /><small>5:00 AM - 8:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Morning6">
+                                                                        <label class="form-check-label" for="Morning6">
+                                                                            Morning<br /><small>8:00 AM - 11:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="LunchBreak6">
+                                                                        <label class="form-check-label" for="LunchBreak6">
+                                                                            Lunch Break<br /><small>11:00 PM - 2:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Afternoon6">
+                                                                        <label class="form-check-label" for="Afternoon6">
+                                                                            Afternoon<br /><small>2:00 PM - 6:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="Evening6">
+                                                                        <label class="form-check-label" for="Evening6">
+                                                                            Evening<br /><small>6:00 PM - 10:00 PM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check radio_btn">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="availability" id="NightOwl6">
+                                                                        <label class="form-check-label" for="NightOwl6">
+                                                                            Night Owl<br /><small>10:00 PM - 12:00 AM</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        error message
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                   
+                                    <div class="d-flex justify-content-evenly">
+                                        <span class="previous-step previous_btn"><i
+                                                class="ti ti-chevron-left ti-xs"></i></span>
+                                        <input type="button" name="next-step" class="next-step next_btn submit" 
+                                            value="Continue >" />
+                                    </div>
 
                                 </fieldset>
                                 <!----End step 8-->
-                                <!-- <fieldset>
-                                    <div class="finish">
-                                        <h2 class="text text-center">
-                                            <strong>FINISHED</strong>
-                                        </h2>
-                                    </div>
-                                    <input type="button" name="previous-step" class="previous-step"
-                                        value="Previous Step" />
-                                </fieldset> -->
+                                <fieldset class="text-center" data-step="9">
+                                    <div class="step_head_img"><img src="assets/img/justonething/finishhead.png"
+                                        alt="image"></div>
+
+                                    <p class="step_title">Thanks for registering!</p>
+                                    <p>We’re working on finding you a partner and will let you know when we do. Keep an eye on your inbox for more information.</p>
+
+                                    <button type="submit" name="next-step" class=" next_btn">Back home</button>
+                                </fieldset>
                             </form>
                         </div>
                     </div>
@@ -718,6 +1404,15 @@
     <script src="assets/js/jquery-3.6.3.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script>
+        var days_selected = {
+            "sunday": [],
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+        };
         $(document).ready(function () {
             var currentGfgStep, nextGfgStep, previousGfgStep;
             var opacity;
@@ -728,8 +1423,12 @@
 
             $(".next-step").click(function () {
 
-                currentGfgStep = $(this).parent();
-                nextGfgStep = $(this).parent().next();
+                currentGfgStep = $(this).closest("fieldset");
+                nextGfgStep = $(this).closest("fieldset").next();
+
+                if($(nextGfgStep).data('step') == 9) {
+                    $("#progressbar").hide();
+                }
 
                 $("#progressbar li").eq($("fieldset")
                     .index(nextGfgStep)).addClass("active");
@@ -752,8 +1451,8 @@
 
             $(".previous-step").click(function () {
 
-                currentGfgStep = $(this).parent();
-                previousGfgStep = $(this).parent().prev();
+                currentGfgStep = $(this).closest("fieldset");
+                previousGfgStep = $(this).closest("fieldset").prev();
 
                 $("#progressbar li").eq($("fieldset")
                     .index(currentGfgStep)).removeClass("active");
@@ -781,20 +1480,91 @@
                 $(".progress-bar")
                     .css("width", percent + "%")
             }
-            $(".submit").click(function () {
+          
+            $("#form").on("submit", function (ev) {
+                ev.preventDefault();
+                var form_data = new FormData($("#form")[0]);
+
+                for ( var key in days_selected ) {
+                    form_data.append(key, days_selected[key]);
+                }
+
+
+                //TODO send the form_data to your server
+                // $.ajax({
+                //     ...
+                // })
+                //submit formdata
+                console.log('====================================');
+                console.log(...form_data);
+                console.log('====================================');
+
                 return false;
             })
+
+
+
+            $(".day-wrapper .name-pill").click(function () {
+                $(".day-wrapper .name-pill.selected").removeClass("selected");
+                var day = $(this).data("day");
+                $(this).addClass("selected");
+ 
+                var timestamps = days_selected[day];
+
+                $(".timeslots-wrapper input").each(function(key, input) { 
+                    if(timestamps.includes($(input).attr("id")))
+                        input.checked =true;
+                    else
+                        input.checked =false;
+                })
+            });
+
+            $(".timeslots-wrapper input").on("change", function () {
+                var timeslot = $(this).attr("id");
+
+                var day = $(".day-wrapper .name-pill.selected").data("day");
+                if(day === undefined) {
+                    day = $(this).closest(".timeslots-wrapper").data("day")
+                } 
+
+                if(days_selected[day].includes(timeslot)) {
+                    days_selected[day].splice(days_selected[day].indexOf(timeslot), 1);
+                } else {
+                    days_selected[day].push(timeslot) 
+                }
+                
+                tagDayWithTime();
+            });
         });
 
+
+        function tagDayWithTime() {
+            for ( var key in days_selected ) {
+                if(days_selected[key].length > 0){
+                    $(".day-wrapper .name-pill[data-day="+key+"]").addClass("active")
+                    $(".accordion-button[data-day="+key+"]").addClass("active")
+                }else {
+                    $(".day-wrapper .name-pill[data-day="+key+"]").removeClass("active")
+                    $(".accordion-button[data-day="+key+"]").removeClass("active")
+                }
+            }
+        }
     </script>
     <script>
         function showStudy() {
             document.getElementById('showStudy').style.display = 'none';
+            document.getElementById('showPartnership').style.display = 'none';
             document.getElementById('showTeach').style.display = 'block';
         }
         function showTeach() {
             document.getElementById('showTeach').style.display = 'none';
+            document.getElementById('showPartnership').style.display = 'none';
             document.getElementById('showStudy').style.display = 'block';
+        }
+        function shoPartnership() {
+            document.getElementById('showTeach').style.display = 'none';
+            document.getElementById('showPartnership').style.display = 'block';
+            document.getElementById('showStudy').style.display = 'none';
         }
     </script>
 

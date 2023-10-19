@@ -99,13 +99,14 @@ body {
   width: 100%;
 }
 .right_content .content h1 {
+  color: #161E3A;
+
+  text-align: center;
+  font-family: Gilroy;
   font-size: 60px;
-  font-weight: 800;
-  line-height: 72px;
-  letter-spacing: 0em;
-  color: #161e3a;
-  max-width: 610px;
-  margin: 0 auto 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%; /* 72px */
 }
 .right_content .content h2 {
   font-size: 30px;
@@ -171,17 +172,19 @@ body {
   max-width: 90px;
 }
 .steps_form .step_title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: center;
   color: #010926;
+
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;  
 }
 .steps_form .radio_btn {
   border: 1.3px solid #dfdfdf;
   border-radius: 7px;
-  padding: 12px 12px;
+  padding: 30px 12px;
   display: flex;
   align-items: center;
 }
@@ -198,12 +201,17 @@ body {
 } 
 .steps_form .radio_btn label {
   margin-left: 12px;
-  font-size: 19px;
-  font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  color: rgba(21, 21, 21, 0.6);
+  color: #151515;
+
+  font-family: Gilroy;
+  font-size: 23.446px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 120%;
+  opacity: 0.6;
   width: 80%;
 }
 .steps_form .radio_btn img {
@@ -216,22 +224,21 @@ body {
 }
 
 .steps_form .previous_btn {
-  height: 54px;
-  line-height: 54px;
-  width: 15%;
+  line-height: 80px;
   text-align: center;
   cursor: pointer;
   display: inline-block;
+  width: 92px;
+  height: 84px;
+  flex-shrink: 0;
 }
 .steps_form .previous_btn i {
   font-size: 27px !important;
 }
 .steps_form .next_btn {
-  width: 81%;
-  height: 54px;
+
   line-height: 54px;
   padding: 0;
-  background: #0e86f4;
   font-size: 19px;
   font-weight: 700;
   letter-spacing: 0em;
@@ -239,20 +246,25 @@ body {
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-  border-radius: 7px;
   margin: 0;
+  width: 302.191px;
+  height: 84px;
+  flex-shrink: 0;
+  border-radius: 7.815px;
+  background: var(--Blue, #0E86F4);
 }
 .steps_form .form-control {
   border: 1.3px solid #dfdfdf;
   border-radius: 7px;
   padding: 12px 12px;
-  height: 54px;
+  height: 93px;
   font-size: 19px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
   color: rgba(21, 21, 21, 0.6);
+  width: 100%;
 }
 .steps_form .form-control:is(:focus, :hover) {
   box-shadow: none;
@@ -267,7 +279,7 @@ body {
 }
 select.form-control:not([multiple="multiple"]) {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8d6de' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-position: calc(100% - 12px) 16px, calc(100% - 20px) 16px, 100% 0;
+  background-position: calc(100% - 12px) 35px, calc(100% - 20px) 16px, 100% 0;
   background-size: 27px 22px, 27px 22px;
   background-repeat: no-repeat;
   -webkit-appearance: none;
@@ -275,6 +287,104 @@ select.form-control:not([multiple="multiple"]) {
   appearance: none;
   padding-right: 1.5rem;
 }
+
+.name-pill {
+  border-radius: 7.824px;
+  border: 1.304px solid #DFDFDF;
+
+  background: #FFF;
+  flex-shrink: 0;
+  color: #151515;
+
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 23.473px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90.259px;
+  height: 94px;
+  cursor: pointer;
+  position: relative;
+}
+
+.name-pill.selected {
+  border: 1.304px solid var(--Blue, #0E86F4);
+  color: var(--Blue, #0E86F4);
+}
+
+.name-pill.active::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex-shrink: 0;
+  fill: var(--Blue, #0E86F4);
+  stroke-width: 1px;
+  stroke: var(--Blue, #0E86F4);
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 30px 30px 0;
+  border-color: transparent #0E86F4 transparent transparent;
+}
+
+label small {
+  color: #151515;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  opacity: 0.4;
+}
+
+.accordion .accordion-button {
+  border-radius: 6px !important;
+  border: 1px solid #DFDFDF;
+  margin-bottom: 10px;
+  background: #FFF;
+  width: 314px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.accordion-body .sum_div.me-2::after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: -35px;
+  border: 1px solid #000;
+  bottom: 59px;
+  opacity: 0.1;
+}
+
+.accordion-body .form-check.radio_btn::after {
+  position: absolute;
+  content: "";
+  border: 1px solid black;
+  opacity: 0.1;
+  left: -15px;
+  width: 15px;
+}
+.accordion .accordion-item {
+  border: none;
+}
+
+.accordion .accordion-button {
+  position: relative;
+  padding-left: 50px;
+}
+
+.accordion .accordion-button.active::before{
+  content: "✅";
+  position: absolute;
+  left: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .right_content {
     height: 100%;
@@ -284,11 +394,16 @@ select.form-control:not([multiple="multiple"]) {
   }
 }
 @media screen and (max-width: 767px) {
+  .name-pill {
+    width: 50%;
+    margin: 10px auto;
+  }
     #form fieldset .sum_flex {
         flex-direction: column;
     }
   #form fieldset .sum_flex .sum_div {
     width: 100% !important;
+    position: relative;
   }
   .right_content .steps_form {
     margin-top: 30px;
@@ -297,7 +412,7 @@ select.form-control:not([multiple="multiple"]) {
   .steps_form .next_btn {
     font-size: 18px;
     line-height: 56px;
-    height: 56px;
+    width: 200px;
   }
   .steps_form .previous_btn i {
     font-size: 25px !important;
